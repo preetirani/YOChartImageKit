@@ -43,6 +43,17 @@
  */
 @property (nonatomic) BOOL smooth;
 
+/**
+ *  Pass array of colors for gradient
+ */
+@property (nonnull, nonatomic) NSArray<UIColor *>* gradientColors;
+
+/**
+ *  `YES` fills gradient to chart view.
+ *  The default value is `NO`
+ */
+@property (nonatomic) BOOL gradientFill;
+
 /** @name Drawing a chart **/
 
 /**

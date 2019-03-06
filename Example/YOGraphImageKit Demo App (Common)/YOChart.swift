@@ -15,7 +15,10 @@ enum YOChart {
             return image.draw(frame, scale: scale)
         case .SmoothLineChart:
             let image = YOLineChartImage()
-            image.fillColor = randomColor()
+            image.fillColor = UIColor.yellow
+            image.gradientFill = true
+            image.strokeWidth = 1.0
+            image.strokeColor = UIColor.blue
             image.values = (0...10).map { _ in NSNumber(value: arc4random_uniform(8)) }
             return image.draw(frame, scale: scale)
         case .VerticalBarChart:
