@@ -1,4 +1,4 @@
-# YOChartImageKit
+# YOChartImageKit with gradient
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/YOChartImageKit.svg?style=flat)](http://cocoadocs.org/docsets/YOChartImageKit)
