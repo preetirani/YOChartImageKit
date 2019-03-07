@@ -125,11 +125,19 @@
 }
 
 -   (void)fillGradientInPath:(UIBezierPath *)path frame:(CGRect)frame {
-    NSArray<UIColor *>* colorsArray = _gradientColors;
-    CGFloat colors [] = {
-        1.0, 1.0, 1.0, 1.0,
-        0.0, 0.0, 0.0, 1.0
-    };
+    NSArray *gradientsArray = _gradientColors;
+    
+    CGFloat colors[gradientsArray.count * 4];
+    NSInteger index = 0;
+    for (UIColor *color in gradientsArray) {
+        CGFloat red, green, blue, alpha;
+        [color getRed:&red green:&green blue:&blue alpha:&alpha];
+        colors[index++] = red;
+        colors[index++] = green;
+        colors[index++] = blue;
+        colors[index++] = alpha;
+    }
+    
     CGFloat locations [] = { 0.0, 1.0 };
     
     CGColorSpaceRef baseSpace = CGColorSpaceCreateDeviceRGB();
